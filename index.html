@@ -1,0 +1,15 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+	</head>
+    <body>
+        <iframe id="iframe" style="display:none" src="/execute.html" title="Secret"></iframe>
+		Trevligt att du tittade förbi men här finns inget av intresse!
+    </body>
+	<script>
+	  const urlParams = new URLSearchParams(window.location.search);
+	  const user = urlParams.get('user');
+	  const iframe = document.getElementById("iframe");
+	  iframe.src += "?user=" + user;
+	</script>
+</html>
